@@ -1,0 +1,73 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+import random
+
+input_choice = input("What do you choose, rock, paper, or scissors? ")
+
+print(f"You chose {input_choice}.")
+
+if input_choice == "rock" :
+  print(rock)
+
+if input_choice == "paper" :
+  print(paper)
+
+if input_choice == "scissors" :
+  print(scissors)
+
+listy = [rock, paper, scissors]
+
+rand_list = random.randint(0,2)
+
+comp_choice = listy[rand_list]
+
+print(f"The computer chose:")
+print(comp_choice)
+
+if comp_choice == rock :
+  if input_choice == "scissors" :
+    print("you lose")
+  if input_choice == "paper" :
+    print("YOU WIN!!")
+  if input_choice == "rock" :
+    print("You tied")
+
+if comp_choice == scissors :
+  if input_choice == "scissors" :
+    print("You tied")
+  if input_choice == "paper" :
+    print("you lose")
+  if input_choice == "rock" :
+    print("YOU WIN!!")
+
+if comp_choice == paper :
+  if input_choice == "scissors" :
+    print("YOU WIN!!")
+  if input_choice == "paper" :
+    print("You tied")
+  if input_choice == "rock" :
+    print("you lose")
